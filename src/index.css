@@ -5,3 +5,16 @@
     font-family: 'Inter', sans-serif;
 
 }
+
+.scrollbar::-webkit-scrollbar {
+  height: 6px;
+  
+  
+
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #eab308;
+  border-radius: 10px;
+  
+}

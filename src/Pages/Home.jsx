@@ -1,6 +1,8 @@
 import MainContent from "./MainContent";
 import SideBar from "./sidebar";
 
+
+
 export default function Home({}) {
   return(
     <div className="">
@@ -8,7 +10,8 @@ export default function Home({}) {
       <SideBar/>
       <MainContent />
       </div>
-    </div>
+      
+    </div> 
     
   )
 }
