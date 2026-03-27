@@ -1,11 +1,12 @@
+import NavBar from "./Navbar";
 import Hakkimda from "./hakkimda";
-import Test from "./test";
 
 export default function MainContent() {
-  return(
-    <div>
-      <Hakkimda/>
-      <Test />
+  return (
+    <div className="relative">
+      <NavBar />
+
+      <Hakkimda />
     </div>
-  )
+  );
 }

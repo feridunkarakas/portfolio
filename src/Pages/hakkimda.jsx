@@ -1,5 +1,5 @@
 import Doing from "./Doing";
-import NavBar from "./navbar";
+
 
 import Skills from "./Skills";
 
@@ -9,7 +9,7 @@ export default function Hakkimda() {
       <h2 className="text-white  px-10 pt-10  font-semibold text-3xl tracking-wide">
         Hakkımda
       </h2>
-      <NavBar />
+
 
       <hr className="w-15 h-1.5 bg-yellow-500 rounded-xl ml-10 mt-5 " />
       <section className="px-10 pt-5 ">
