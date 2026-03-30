@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
-:root{
-    background-color:#121212;
-    font-family: 'Inter', sans-serif;
-
+:root {
+  background-color: #121212;
+  font-family: "Inter", sans-serif;
 }
 
 .scrollbar::-webkit-scrollbar {
   height: 6px;
-  
-  
-
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
   background: #eab308;
   border-radius: 10px;
-  
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #eab308 #18181b;
 }

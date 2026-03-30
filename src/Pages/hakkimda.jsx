@@ -5,7 +5,7 @@ import Skills from "./Skills";
 
 export default function Hakkimda() {
   return (
-    <div className="h-240 w-220 mt-15 rounded-4xl bg-[#1E1E1F] mb-15 ">
+    <div >
       <h2 className="text-white  px-10 pt-10  font-semibold text-3xl tracking-wide">
         Hakkımda
       </h2>
