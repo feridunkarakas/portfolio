@@ -18,7 +18,7 @@ export default function MainContent({ active, setActive }) {
   } else if (active ==="cv")
     content = <Cv/>
   return (
-    <div className="relative h-240 w-220 mt-15 rounded-4xl bg-[#1E1E1F] mb-15">
+    <div className="relative h-260 w-220 mt-15 rounded-4xl bg-[#1E1E1F] mb-10">
       <NavBar active={active} setActive={setActive} />
 
       <AnimatePresence mode="wait">

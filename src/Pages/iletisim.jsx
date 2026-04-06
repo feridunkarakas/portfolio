@@ -1,4 +1,28 @@
+import { Send } from "lucide-react";
+import { useState } from "react";
+
 export default function Iletisim() {
+  const [formdata, setFormData] = useState({
+    isim: "",
+    email: "",
+    konu: "",
+    desc: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formdata);
+  };
+
   return (
     <div>
       <div>
@@ -16,12 +40,13 @@ export default function Iletisim() {
         İletişim Formu
       </p>
 
-      <form className="text-white">
+      <form className="text-white" onSubmit={handleSubmit}>
         <input
           type="text"
           name="isim"
           placeholder="İsim Soyisim"
           className="border border-gray-600 rounded-2xl ml-10 w-95 mt-5 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          onChange={handleChange}
         />
         <input
           type="email"
@@ -31,17 +56,22 @@ export default function Iletisim() {
         />
         <input
           type="text"
-          name="text"
+          name="Konu"
           placeholder="Konu"
           className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
         />
         <textarea
-          name="text"
-          placeholder="Konu"
+          name="desc"
+          placeholder="Açıkalama"
           className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-30 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400 p-3 resize-none"
         ></textarea>
 
-        <button  type="submit" className="  border border-zinc-600 cursor-pointer text-yellow-400 tracking-wide font-extralight ml-155 mt-7 w-50 h-12 rounded-xl ">
+        <button
+          type="submit"
+          className="flex items-center justify-center gap-2 border border-zinc-600 cursor-pointer text-yellow-400 tracking-wide font-extralight ml-156 mt-7 w-50 h-12 rounded-xl hover:bg-yellow-500 hover:text-black transition"
+        >
+          {" "}
+          <Send className="w-4 h-4 transition group-hover:translate-x-1 group-hov " />
           Gönder
         </button>
       </form>

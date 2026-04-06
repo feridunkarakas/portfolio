@@ -58,10 +58,10 @@ export default function Hakkimda() {
         />
       </div>
 
-      <h2 className="text-white  px-10 pt-10  font-semibold text-2xl tracking-wide">
+      <h2 className="text-white px-10 pt-10  font-semibold text-2xl tracking-wide">
         Yetenekler
       </h2>
-      <div className="scrollbar flex gap-12 overflow-x-auto px-10 pt-5 pb-6">
+      <div className="scrollbar flex gap-12 overflow-x-auto px-10 pt-5 pb-15">
         <Skills
           iccons={
             <img
