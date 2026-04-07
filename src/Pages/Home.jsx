@@ -2,6 +2,7 @@ import { useState } from "react";
 import MainContent from "./MainContent";
 import SideBar from "./sidebar";
 
+
 export default function Home() {
   const [active, setActive] = useState("hakkimda");
 

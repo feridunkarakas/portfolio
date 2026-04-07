@@ -1,5 +1,8 @@
 import { Send } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Toaster } from "sonner";
+import { toast } from "sonner";
 
 export default function Iletisim() {
   const [formdata, setFormData] = useState({
@@ -8,6 +11,8 @@ export default function Iletisim() {
     konu: "",
     desc: "",
   });
+
+  const [load, setLoad] = useState(false); // gönder butonu load state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +25,32 @@ export default function Iletisim() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formdata);
+    if (!formdata.isim || !formdata.email || !formdata.konu || !formdata.desc) {
+      toast.error("Lütfen tüm alanları doldurun");
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_ga8qbn5",
+        "template_hssj5he",
+        {
+          isim: formdata.isim,
+          email: formdata.email,
+          konu: formdata.konu,
+          desc: formdata.desc,
+        },
+        "7r4nFBwUKsfIy1_2T",
+      )
+      .then((res) => {
+        {
+          setLoad(true); // gönder butonu load state 
+        }
+        toast.success("Mesaj Başarıyla Gönderildi. ");
+      })
+      .catch((err) => {
+        toast.error("Mesaj Gönderilemedi, Lütfen Tekrar Deneyin. ");
+      });
   };
 
   return (
@@ -50,20 +80,23 @@ export default function Iletisim() {
         />
         <input
           type="email"
-          name="Email"
+          name="email"
           placeholder="Email"
           className="border border-gray-600 rounded-2xl ml-6 w-95 mt-5 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          onChange={handleChange}
         />
         <input
           type="text"
-          name="Konu"
+          name="konu"
           placeholder="Konu"
           className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          onChange={handleChange}
         />
         <textarea
           name="desc"
           placeholder="Açıkalama"
           className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-30 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400 p-3 resize-none"
+          onChange={handleChange}
         ></textarea>
 
         <button
@@ -75,6 +108,7 @@ export default function Iletisim() {
           Gönder
         </button>
       </form>
+      <Toaster />
     </div>
   );
 }
