@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import { toast } from "sonner";
 
 export default function Iletisim() {
+  
   const [formdata, setFormData] = useState({
     isim: "",
     email: "",
@@ -12,7 +13,17 @@ export default function Iletisim() {
     desc: "",
   });
 
-  const [load, setLoad] = useState(false); // gönder butonu load state
+  function reset() {
+    // * form state'ini başlangıç (boş) haline döndürür, böylece inputlar temizlenir
+    setFormData({
+      isim: "",
+      email: "",
+      konu: "",
+      desc: "",
+    });
+  }
+
+  const [load, setLoad] = useState(false); // * form gönderilirken loading durumunu kontrol eder (buton disabled + yazı değişir)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,31 +35,35 @@ export default function Iletisim() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //  * form gönder dedikten sonra sayfanın yenilemesi engelledik.
     if (!formdata.isim || !formdata.email || !formdata.konu || !formdata.desc) {
-      toast.error("Lütfen tüm alanları doldurun");
-      return;
+      //*  eğer formdata'daki isim dolu değil ise veya email...
+      toast.error("Lütfen tüm alanları doldurun"); // error göster.
+
+      return; // ! return fonksiyonun çalışmasını durdurur.
     }
+    setLoad(true); //  * kod if bloğundan geçerse load state çalışır.
 
     emailjs
       .send(
         "service_ga8qbn5",
         "template_hssj5he",
         {
-          isim: formdata.isim,
+          isim: formdata.isim, // ! emailjs'e hangi verileri göndereceğimizi seçiyoruz.
           email: formdata.email,
           konu: formdata.konu,
           desc: formdata.desc,
         },
-        "7r4nFBwUKsfIy1_2T",
+        "M7dFvqQnKlfTOfIrI",
       )
       .then((res) => {
-        {
-          setLoad(true); // gönder butonu load state 
-        }
         toast.success("Mesaj Başarıyla Gönderildi. ");
+        setLoad(false); // ! gönderim tamamlandı, loading kapatılır ve buton tekrar aktif olur
+        reset(); //* then başarılı bloğu olduğu için reset fonksiyonunu burada çağırdık. reset fonksiyonu input değerlerini sıfırlıyor.
       })
       .catch((err) => {
+        console.log(err);
+        setLoad(false); //!  veya gönderim hataya düştü, loading kapatılır ve buton tekrar aktif olur
         toast.error("Mesaj Gönderilemedi, Lütfen Tekrar Deneyin. ");
       });
   };
@@ -72,6 +87,7 @@ export default function Iletisim() {
 
       <form className="text-white" onSubmit={handleSubmit}>
         <input
+          value={formdata.isim} // ? controlled input: değer state'ten gelir, bu yüzden state sıfırlanınca input da sıfırlanır
           type="text"
           name="isim"
           placeholder="İsim Soyisim"
@@ -79,6 +95,7 @@ export default function Iletisim() {
           onChange={handleChange}
         />
         <input
+          value={formdata.email}
           type="email"
           name="email"
           placeholder="Email"
@@ -86,6 +103,7 @@ export default function Iletisim() {
           onChange={handleChange}
         />
         <input
+          value={formdata.konu}
           type="text"
           name="konu"
           placeholder="Konu"
@@ -93,6 +111,7 @@ export default function Iletisim() {
           onChange={handleChange}
         />
         <textarea
+          value={formdata.desc}
           name="desc"
           placeholder="Açıkalama"
           className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-30 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400 p-3 resize-none"
@@ -100,12 +119,13 @@ export default function Iletisim() {
         ></textarea>
 
         <button
+          disabled={load}
           type="submit"
           className="flex items-center justify-center gap-2 border border-zinc-600 cursor-pointer text-yellow-400 tracking-wide font-extralight ml-156 mt-7 w-50 h-12 rounded-xl hover:bg-yellow-500 hover:text-black transition"
         >
           {" "}
           <Send className="w-4 h-4 transition group-hover:translate-x-1 group-hov " />
-          Gönder
+          {load ? "Gönderiliyor" : "Gönder"}
         </button>
       </form>
       <Toaster />

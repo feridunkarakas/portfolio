@@ -6,12 +6,12 @@ import Lcon from "./icons";
 
 export default function SideBar() {
   return (
-    <div className="ms-100 mt-15 border-1  w-65 h-160 bg-[#1E1E1F] rounded-4xl sticky top-15">
+    <div className="ms-100 mt-15 border  w-65 h-160 bg-[#1E1E1F] rounded-4xl sticky top-15">
       <div className="m-10 ">
-        <div className="border-1 bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
+        <div className="border bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
           <img
             className="flex justify-center rounded-4xl w-30 h-30 m-9 cursor-pointer"
-            src="" alt="fotos"
+             alt="fotos"
           />
         </div>
 
@@ -19,7 +19,7 @@ export default function SideBar() {
           Feridun Karakaş
         </h1>
 
-        <div className="border-1 bg-zinc-800 rounded-2xl text-center mt-4">
+        <div className="border bg-zinc-800 rounded-2xl text-center mt-4">
           <span className="text-white text-sm">Full Stack Developer</span>
         </div>
 
@@ -28,7 +28,7 @@ export default function SideBar() {
           <Contact
             Icon={EnvelopeIcon}
             label="email"
-            value="feridunkarakas@.."
+            value="feridunkarakas@gm.."
           />
           <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 1038" />
           <Contact
