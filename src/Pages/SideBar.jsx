@@ -11,7 +11,7 @@ export default function SideBar() {
         <div className="border bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
           <img
             className="flex justify-center rounded-4xl w-30 h-30 m-9 cursor-pointer"
-             alt="fotos"
+            alt="fotos"
           />
         </div>
 
@@ -25,12 +25,15 @@ export default function SideBar() {
 
         <hr className="border-gray-600 mt-4" />
         <div className="mt-8 space-y-6">
-          <Contact
-            Icon={EnvelopeIcon}
-            label="email"
-            value="feridunkarakas@gm.."
-          />
-          <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 1038" />
+          <a className="flex" href="mailto:feridunkarakas@gm...">
+            <Contact
+              Icon={EnvelopeIcon}
+              label="email"
+              value="feridunkarakas@gm.."
+
+            />
+          </a>
+          <a className="flex" href="tel:+90 552 292 1038"> <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 1038" /> </a>
           <Contact
             Icon={MapPinIcon}
             label="Location"
