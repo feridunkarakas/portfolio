@@ -10,7 +10,8 @@ export default function SideBar() {
       <div className="m-10 ">
         <div className="border bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
           <img
-            className="flex justify-center rounded-4xl w-30 h-30 m-9 cursor-pointer"
+            className="flex justify-center rounded-4xl w-43 h-43 m-3   cursor-pointer"
+            src="src/assests/foto.jpeg"
             alt="fotos"
           />
         </div>

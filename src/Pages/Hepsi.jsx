@@ -1,12 +1,9 @@
 import Prftl from "./prftl";
 
-export default function PortfolioTabs() {
+export default function Hepsi() {
   return (
-   <div>
-     
-   
-
-      <div className="gap-10 px-10 grid grid-cols-3 pt-10 border">
+    <div>
+      <div className="gap-10 px-10 grid grid-cols-3 pt-3 ">
         <Prftl
           title="Proje 1"
           iimg={<img src="src\assests\tailwindcss.svg" />}
@@ -29,5 +26,4 @@ export default function PortfolioTabs() {
       </div>
     </div>
   );
-  
 }
