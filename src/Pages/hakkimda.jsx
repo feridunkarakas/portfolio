@@ -107,6 +107,15 @@ export default function Hakkimda() {
           }
           tittle="JavaScript"
         />
+        <Skills
+          iccons={
+            <img
+              src="src\assests\sql.svg"
+              className="h-20 w-20 object-contain"
+            />
+          }
+          tittle="SQL"
+        />
       </div>
     </div>
   );
