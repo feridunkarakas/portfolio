@@ -77,7 +77,9 @@ export default function Iletisim() {
         <hr className="w-15 h-1.5 bg-yellow-500 rounded-xl ml-10 mt-5 " />
       </div>
       <iframe
-        className="w-200 m-10 h-100 rounded-3xl"
+        // Harita telefonda tasmiyor.
+        // xl'de eski boyuta geri donuyor.
+        className="mx-10 mt-8 h-72 w-[calc(100%-5rem)] rounded-3xl md:h-96 xl:h-100 xl:w-200"
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7155.68534247047!2d28.848478374284742!3d41.05598330889955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1774882171197!5m2!1str!2str"
       ></iframe>
 
@@ -85,13 +87,17 @@ export default function Iletisim() {
         İletişim Formu
       </p>
 
-      <form className="text-white" onSubmit={handleSubmit}>
+      <form
+        // Form mantigi basit: mobilde tek kolon, md'de iki kolon.
+        className="grid grid-cols-1 mx-10 w-[calc(100%-5rem)] text-white md:grid-cols-2 md:gap-x-6 xl:w-200"
+        onSubmit={handleSubmit}
+      >
         <input
           value={formdata.isim} // ? controlled input: değer state'ten gelir, bu yüzden state sıfırlanınca input da sıfırlanır
           type="text"
           name="isim"
           placeholder="İsim Soyisim"
-          className="border border-gray-600 rounded-2xl ml-10 w-95 mt-5 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          className="mt-5 h-12 w-full rounded-2xl border border-gray-600 p-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-red-600"
           onChange={handleChange}
         />
         <input
@@ -99,7 +105,7 @@ export default function Iletisim() {
           type="email"
           name="email"
           placeholder="Email"
-          className="border border-gray-600 rounded-2xl ml-6 w-95 mt-5 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          className="mt-5 h-12 w-full rounded-2xl border border-gray-600 p-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-red-600"
           onChange={handleChange}
         />
         <input
@@ -107,24 +113,28 @@ export default function Iletisim() {
           type="text"
           name="konu"
           placeholder="Konu"
-          className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-12 focus:outline-none focus:ring-1 focus:ring-red-600 placeholder-gray-400 p-3"
+          // Konu alani tek satirda genis dursun diye iki kolonu birden kapliyor.
+          className="mt-7 h-12 w-full rounded-2xl border border-gray-600 p-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-red-600 md:col-span-2"
           onChange={handleChange}
         />
         <textarea
           value={formdata.desc}
           name="desc"
           placeholder="Açıkalama"
-          className="border border-gray-600 rounded-2xl ml-10 w-197 mt-7 h-30 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400 p-3 resize-none"
+          // Aciklama da ayni: tam satir kaplasin.
+          className="mt-7 h-30 w-full resize-none rounded-2xl border border-gray-600 p-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 md:col-span-2"
           onChange={handleChange}
         ></textarea>
 
         <button
           disabled={load}
           type="submit"
-          className="flex items-center justify-center gap-2 border border-zinc-600 cursor-pointer text-yellow-400 tracking-wide font-extralight ml-156 mt-7 w-50 h-12 rounded-xl hover:bg-yellow-500 hover:text-black transition"
+          // Buton mobilde tam genislik.
+          // md'de saga yaslanip masaustu gorunume yaklasiyor.
+          className="mt-7 flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-zinc-600 text-yellow-400 tracking-wide font-extralight transition hover:bg-yellow-500 hover:text-black md:col-span-2 md:justify-self-end md:w-50"
         >
           {" "}
-          <Send className="w-4 h-4 transition group-hover:translate-x-1 group-hov " />
+          <Send className="w- h-4 transition group-hover:translate-x-1 group-hov " />
           {load ? "Gönderiliyor" : "Gönder"}
         </button>
       </form>

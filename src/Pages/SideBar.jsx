@@ -6,8 +6,10 @@ import Lcon from "./icons";
 
 export default function SideBar() {
   return (
-    <div className="ms-100 mt-15 border  w-65 h-160 bg-[#1E1E1F] rounded-4xl sticky top-15">
-      <div className="m-10 ">
+    // Telefonda full acilsin, buyuk ekranda eski kart boyutu + sticky devam etsin.
+    <div className="mt-6 w-full max-w-full rounded-4xl border bg-[#1E1E1F] sm:mt-10 sm:max-w-[420px] md:mt-15 md:h-160 md:w-65 md:sticky md:top-15 md:ms-0">
+      {/* Ic boslugu da kademeli: kucukte az, ekrani buyutunce normal seviyeye geliyor. */}
+      <div className="m-6 sm:m-8 md:m-10">
         <div className="border bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
           <img
             className="flex justify-center rounded-4xl w-43 h-43 m-3   cursor-pointer"

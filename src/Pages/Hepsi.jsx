@@ -3,7 +3,8 @@ import Prftl from "./prftl";
 export default function Hepsi() {
   return (
     <div>
-      <div className="gap-10 px-10 grid grid-cols-3 pt-3 ">
+      {/* Kart dizilimi: telefonda 1, tablette 2, buyuk ekranda 3. */}
+      <div className="grid grid-cols-1 gap-8 px-10 pt-3 md:grid-cols-2 xl:grid-cols-3">
         <Prftl
           title="Proje 1"
           iimg={<img src="src\assests\tailwindcss.svg" />}

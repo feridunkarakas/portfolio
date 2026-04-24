@@ -8,7 +8,9 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex gap-5">
+      {/* Olay su: telefonda alt alta dursun, buyuk ekranda yan yana gecsin.
+          justify-center da komple blogu ortaya cekiyor. */}
+      <div className="flex flex-col items-start gap-5 md:flex-row md:items-start md:justify-center">
         <SideBar />
         <MainContent active={active} setActive={setActive} />
       </div>

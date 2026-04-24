@@ -33,24 +33,25 @@ export default function Hakkimda() {
         Neler Yapıyorum{" "}
       </h2>
 
-      <div className="pt-4 px-10 grid grid-cols-2 gap-5">
+      {/* Kisa hali: telefonda 1 kolon, buyuk ekranda 2 kolon. Daha duzgun gozukuyor. */}
+      <div className="grid grid-cols-1 gap-5 px-10 pt-4 lg:grid-cols-2">
         <Doing
-          title="Mobile Apps"
+          title="Mobil Uygulamalar"
           desc="Professional development of applications for Android and ios."
           icons={<img src="src\assests\icon-app.svg" className="w-10 h-20" />}
         />
         <Doing
-          title="Web development "
+          title="Web Geliştirme "
           desc="Professional development of applications for Android and ios."
           icons={<img src="src\assests\icon-dev.svg" className="w-15 h-20" />}
         />
         <Doing
-          title="UI/UX Design"
+          title="UI/UX Tasarım"
           desc="Professional development of applications for Android and ios."
           icons={<img src="src\assests\design.svg" className="w-15 h-20" />}
         />
         <Doing
-          title="Mobile Apps"
+          title="Backend Geliştirme"
           desc="Professional development of applications for Android and ios."
           icons={
             <img src="src\assests\icon-backend.svg" className="w-15 h-20" />

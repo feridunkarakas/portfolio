@@ -13,10 +13,13 @@ export default function MainContent({ active, setActive }) {
     // Neden boyle yaptim? Cunku her sayfanin icerik uzunlugu farkli:
     // CV daha uzun, Portfolyo daha kisa gibi.
     // Sonradan bir sayfayi uzatip kisaltmak icin sadece bu alani degistirmem yeterli.
-    hakkimda: { height: "h-250", width: "w-220" },
-    cv: { height: "h-320", width: "w-220" },
-    portfolyo: { height: "h-220", width: "w-220" },
-    iletisim: { height: "h-250", width: "w-220" },
+    // Buraya xl koydum ki desktopta eski olculer ayni kalsin.
+    hakkimda: { size: "xl:h-250 xl:w-220" },
+    // CV uzun olabiliyor. O yuzden min-h + h-auto dedim.
+    // Mantik: icerik uzarsa kutu da uzuyor, icerde scroll cikmiyor.
+    cv: { size: "xl:min-h-320 xl:h-auto xl:w-220" },
+    portfolyo: { size: "xl:h-220 xl:w-220" },
+    iletisim: { size: "xl:h-250 xl:w-220" },
   };
 
   if (active === "hakkimda") {
@@ -36,23 +39,32 @@ export default function MainContent({ active, setActive }) {
   } else {
     // Guvenlik icin default verdim.
     // Yanlis bir active degeri gelirse ekran patlamasin diye yedek boyut kullaniyorum.
-    activeLayout = { height: "h-220", width: "w-220" };
+    activeLayout = { size: "xl:h-220 xl:w-220" };
   }
   // Burada h-320 ve w-220 gibi classlari tek string haline getiriyorum.
-  const activeContainerSize = `${activeLayout.height} ${activeLayout.width}`;
+  const activeContainerSize = activeLayout.size;
 
   return (
     <div
-      className={`relative mt-15 mb-10 rounded-4xl bg-[#1E1E1F] ${activeContainerSize}`}
+      // w-full + max-w-full = kucuk ekranda saga tasmasin.
+      // overflow-hidden = ilk acilista ziplayan scroll bari gizliyor.
+      className={`relative mt-6 mb-10 w-full max-w-full overflow-hidden rounded-4xl bg-[#1E1E1F] sm:mt-10 lg:mt-15 ${activeContainerSize}`}
     >
       <NavBar active={active} setActive={setActive} />
 
-      <AnimatePresence mode="wait">
+      {/* initial={false} verdim.
+          Sebep: ilk acilista animasyon yuzunden bir anlik kayma/scroll oluyordu. */}
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
+          // Mobilde navbar ustte biniyor, o yuzden icerigi asagi ittirdim.
+          // xl'de buna gerek kalmiyor, pt'yi sifirliyorum.
+          className="pt-18 sm:pt-20 xl:pt-0"
           key={active}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
+          // Sadece opacity biraktim.
+          // y ile animasyon yapinca scroll bar bir gorunup bir kayboluyordu.
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
           {content}
