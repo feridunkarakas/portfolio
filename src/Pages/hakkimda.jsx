@@ -1,7 +1,16 @@
 import Doing from "./Doing";
 
 import Skills from "./Skills";
-
+import iconApp from "../assests/icon-app.svg";
+import iconDev from "../assests/icon-dev.svg";
+import design from "../assests/design.svg";
+import iconBackend from "../assests/icon-backend.svg";
+import tailwindcss from "../assests/tailwindcss.svg";
+import reactIcon from "../assests/react.svg";
+import htmlIcon from "../assests/html.svg";
+import cssIcon from "../assests/css.svg";
+import geminiSvg from "../assests/gemini-svg.svg";
+import sqlIcon from "../assests/sql.svg";
 export default function Hakkimda() {
   return (
     <div>
@@ -38,23 +47,23 @@ export default function Hakkimda() {
         <Doing
           title="Mobil Uygulamalar"
           desc="Professional development of applications for Android and ios."
-          icons={<img src="src\assests\icon-app.svg" className="w-10 h-20" />}
+          icons={<img src={iconApp} className="w-10 h-20" alt="" />}
         />
         <Doing
           title="Web Geliştirme "
           desc="Professional development of applications for Android and ios."
-          icons={<img src="src\assests\icon-dev.svg" className="w-15 h-20" />}
+          icons={<img src={iconDev} className="w-15 h-20" alt="" />}
         />
         <Doing
           title="UI/UX Tasarım"
           desc="Professional development of applications for Android and ios."
-          icons={<img src="src\assests\design.svg" className="w-15 h-20" />}
+          icons={<img src={design} className="w-15 h-20" alt="" />}
         />
         <Doing
           title="Backend Geliştirme"
           desc="Professional development of applications for Android and ios."
           icons={
-            <img src="src\assests\icon-backend.svg" className="w-15 h-20" />
+            <img src={iconBackend} className="w-15 h-20" alt="" />
           }
         />
       </div>
@@ -66,7 +75,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\tailwindcss.svg"
+              src={tailwindcss}
               className="h-16 w-24 object-contain"
             />
           }
@@ -75,7 +84,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\react.svg"
+              src={reactIcon}
               className="h-20 w-20 object-contain"
             />
           }
@@ -84,7 +93,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\html.svg"
+              src={htmlIcon}
               className="h-24 w-20 object-contain"
             />
           }
@@ -93,7 +102,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\css.svg"
+              src={cssIcon}
               className="h-24 w-20 object-contain"
             />
           }
@@ -102,7 +111,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\gemini-svg.svg"
+              src={geminiSvg}
               className="h-20 w-20 object-contain"
             />
           }
@@ -111,7 +120,7 @@ export default function Hakkimda() {
         <Skills
           iccons={
             <img
-              src="src\assests\sql.svg"
+              src={sqlIcon}
               className="h-20 w-20 object-contain"
             />
           }

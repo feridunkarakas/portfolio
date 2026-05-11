@@ -3,6 +3,9 @@ import { PhoneIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import Contact from "./contact";
 import Lcon from "./icons";
+import foto from "../assests/foto.jpeg";
+import linkedinSvg from "../assests/linkedin.svg";
+import githubSvg from "../assests/github.svg";
 
 export default function SideBar() {
   return (
@@ -13,7 +16,7 @@ export default function SideBar() {
         <div className="border bg-zinc-800  w-50 h-50 border-white rounded-4xl ">
           <img
             className="flex justify-center rounded-4xl w-43 h-43 m-3   cursor-pointer"
-            src="src/assests/foto.jpeg"
+            src={foto}
             alt="fotos"
           />
         </div>
@@ -45,11 +48,11 @@ export default function SideBar() {
           <div className=" flex justify-center gap-7 ">
             <Lcon
               icc="https://www.linkedin.com/in/feridunkarakas/"
-              svg="src\assests\linkedin.svg"
+              svg={linkedinSvg}
             />
             <Lcon
               icc="https://github.com/feridunkarakas"
-              svg="src\assests\github.svg"
+              svg={githubSvg}
             />
           </div>
         </div>
