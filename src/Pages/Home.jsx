@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MainContent from "./MainContent";
-import SideBar from "./sidebar";
+import SideBar from "./Sidebar";
 
 
 export default function Home() {
