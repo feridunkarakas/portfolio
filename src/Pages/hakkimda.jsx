@@ -21,22 +21,20 @@ export default function Hakkimda() {
       <hr className="w-15 h-1.5 bg-yellow-500 rounded-xl ml-10 mt-5 " />
       <section className="px-10 pt-6">
         <p className="text-sm leading-7 tracking-wide text-gray-200">
-          Yazılıma yaklaşık 1 yıl önce başladım ve kendimi full-stack geliştirme
-          alanında ilerletmeye odaklıyorum. Şu anda Vicco’da Frontend Developer
-          olarak çalışıyor, React, HTML, CSS, JavaScript ve Tailwind ile modern
-          ve kullanıcı odaklı arayüzler geliştiriyorum. Aynı zamanda SQL
-          öğrenerek backend tarafında da kendimi geliştirmeye devam
-          ediyorum.
+          Uzun yıllar e-ticaret sektöründe operasyon yönetimi ve
+          kategori uzmanlığı alanlarında profesyonel deneyim
+          kazandım. Kariyerimde radikal bir dönüşüm yaparak
+          tamamen yazılım geliştirme alanına odaklandım. Şu
+          anda Vicco bünyesinde Frontend Developer olarak
+          görev alıyor ve şirket içi yönetim portallarının
+          geliştirilmesinde aktif rol alıyorum. Modern frontend
+          ekosisteminde React ve güncel kütüphanelerle çözüm
+          üretirken, teknik yetkinliklerimi mobil uygulama
+          geliştirme alanına taşımayı hedefliyorum.
         </p>
         <hr className="mt-4 border-zinc-700" />
       </section>
-      <div className="px-10 pt-5">
-        <p className="text-sm leading-7 tracking-wide text-gray-200">
-          Kendini sürekli geliştirmeye çalışan, öğrenmeye açık ve daha iyisini
-          hedefleyen bir geliştirici olarak projelere değer katmayı
-          amaçlıyorum.
-        </p>
-      </div>
+
 
       <h2 className="text-white  px-10 pt-10  font-semibold text-2xl tracking-wide">
         Neler Yapıyorum{" "}

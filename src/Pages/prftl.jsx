@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaGooglePlay, FaAppStoreIos } from "react-icons/fa";
 
 export default function Prftl({
@@ -9,17 +10,35 @@ export default function Prftl({
   appStoreLink,
 }) {
   const hasStores = playStoreLink || appStoreLink;
+  const [isMobileStoresOpen, setIsMobileStoresOpen] = useState(false);
+
+  const handleCardClick = () => {
+    if (!hasStores || window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
+    setIsMobileStoresOpen((prev) => !prev);
+  };
 
   const cardInner = (
-    <div className="relative border border-zinc-700 rounded-xl h-40 overflow-hidden transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:border-yellow-400/50 group-hover:shadow-lg group-hover:shadow-yellow-400/10">
+    <div
+      onClick={handleCardClick}
+      className="relative h-40 overflow-hidden rounded-xl border border-zinc-700 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:border-yellow-400/50 group-hover:shadow-lg group-hover:shadow-yellow-400/10"
+    >
       {iimg}
       {hasStores && (
-        <div className="absolute inset-0 bg-black/70 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+        <div
+          className={`absolute inset-0 flex items-center justify-center gap-2 rounded-xl bg-black/70 transition-opacity duration-300 ${
+            isMobileStoresOpen
+              ? "pointer-events-auto opacity-100"
+              : "pointer-events-none opacity-0"
+          } md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100`}
+        >
           {appStoreLink && (
             <a
               href={appStoreLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-1.5 bg-white/10 hover:bg-yellow-400 hover:text-zinc-900 text-white px-2.5 py-1.5 rounded-md border border-white/20 backdrop-blur-sm transition-colors"
               aria-label="App Store"
             >
@@ -32,6 +51,7 @@ export default function Prftl({
               href={playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-1.5 bg-white/10 hover:bg-yellow-400 hover:text-zinc-900 text-white px-2.5 py-1.5 rounded-md border border-white/20 backdrop-blur-sm transition-colors"
               aria-label="Google Play"
             >
