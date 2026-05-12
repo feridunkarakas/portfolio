@@ -44,24 +44,24 @@ export default function Hakkimda() {
       <div className="grid grid-cols-1 gap-5 px-10 pt-4 lg:grid-cols-2">
         <Doing
           title="Mobil Uygulamalar"
-          desc="Professional development of applications for Android and ios."
-          icons={<img src={iconApp} className="w-10 h-20" alt="" />}
+          desc="React Native kullanarak modern ve kullanıcı dostu mobil arayüzler geliştiriyorum."
+          icons={<img src={iconApp} className="w-12 h-12 object-contain" alt="" />}
         />
         <Doing
           title="Web Geliştirme "
-          desc="Professional development of applications for Android and ios."
-          icons={<img src={iconDev} className="w-15 h-20" alt="" />}
+          desc="React ve Tailwind CSS ile hızlı, duyarlı ve güncel web uygulamaları inşa ediyorum."
+          icons={<img src={iconDev} className="w-12 h-12 object-contain" alt="" />}
         />
         <Doing
           title="UI/UX Tasarım"
-          desc="Professional development of applications for Android and ios."
-          icons={<img src={design} className="w-15 h-20" alt="" />}
+          desc="Kullanıcı deneyimini merkeze alan, sade ve anlaşılır arayüz tasarımları üzerinde çalışıyorum."
+          icons={<img src={design} className="w-12 h-12 object-contain" alt="" />}
         />
         <Doing
           title="Backend Geliştirme"
-          desc="Professional development of applications for Android and ios."
+          desc="API entegrasyonları ve temel sunucu taraflı mantıklar kurgulayarak projelerimi uçtan uca destekliyorum."
           icons={
-            <img src={iconBackend} className="w-15 h-20" alt="" />
+            <img src={iconBackend} className="w-12 h-12 object-contain" alt="" />
           }
         />
       </div>
@@ -74,7 +74,7 @@ export default function Hakkimda() {
           iccons={
             <img
               src={tailwindcss}
-              className="h-16 w-24 object-contain"
+              className="h-20 w-20 object-contain"
             />
           }
           tittle="Tailwindcss"
@@ -92,7 +92,7 @@ export default function Hakkimda() {
           iccons={
             <img
               src={htmlIcon}
-              className="h-24 w-20 object-contain"
+              className="h-20 w-20 object-contain"
             />
           }
           tittle="HTML"
@@ -101,7 +101,7 @@ export default function Hakkimda() {
           iccons={
             <img
               src={cssIcon}
-              className="h-24 w-20 object-contain"
+              className="h-20 w-20 object-contain"
             />
           }
           tittle="CSS"

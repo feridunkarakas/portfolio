@@ -1,0 +1,51 @@
+<svg width="128" height="128" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrow Head Marker? No, just draw it manually for custom shape -->
+  </defs>
+  
+  <!-- 
+     Symmetric 3-Arrow Recycle Icon
+     Center 50,50. Radius ~35.
+     Segment length ~90 degrees.
+  -->
+
+  <!-- Segment 1: Cyan -->
+  <g transform="rotate(0, 50, 50)">
+    <!-- Path: Start at -30deg (top-left ish) to -120deg (top right?) 
+         Let's define one nice segment and reuse it with rotates.
+         Segment: Start angle 150 deg, End angle 250 deg.
+         (Drawing from ~5 o'clock to ~8 o'clock clockwise? No, counter-clockwise?)
+    -->
+    <!-- Let's manually path one segment that looks like the CSS one (Top-Left quadrant ish) -->
+    <!-- Arc from Angle 230 to 320 (approx 8 o'clock to 11 o'clock) -->
+    <!-- Center 50,50, Radius 34.
+         x = 50 + 34*cos(a), y = 50 + 34*sin(a)
+         230deg (rad 4.01): x=28, y=24
+         320deg (rad 5.58): x=76, y=28 (Wait, 320 is bottom right in normal math)
+         CSS 0deg=Top.
+     -->
+     
+     <!-- Let's just draw standard arcs.
+          Arrow 1: #00b4d8. Position: Top Left. 
+          Arrow 2: #fca311. Position: Right.
+          Arrow 3: #e63946. Position: Bottom Left.
+     -->
+     
+     <!-- Segment 1 (Cyan) -->
+     <path d="M22 65 A 34 34 0 0 1 35 20" stroke="#00b4d8" stroke-width="12" fill="none" stroke-linecap="butt" />
+     <polygon points="35,10 55,20 35,30" fill="#00b4d8" />
+  </g>
+
+  <!-- Segment 2 (Orange) - Rotated 120 -->
+  <g transform="rotate(120, 50, 50)">
+     <path d="M22 65 A 34 34 0 0 1 35 20" stroke="#fca311" stroke-width="12" fill="none" stroke-linecap="butt" />
+     <polygon points="35,10 55,20 35,30" fill="#fca311" />
+  </g>
+  
+  <!-- Segment 3 (Red) - Rotated 240 -->
+  <g transform="rotate(240, 50, 50)">
+     <path d="M22 65 A 34 34 0 0 1 35 20" stroke="#e63946" stroke-width="12" fill="none" stroke-linecap="butt" />
+     <polygon points="35,10 55,20 35,30" fill="#e63946" />
+  </g>
+
+</svg>

@@ -11,8 +11,8 @@ export default function SideBar() {
   return (
     // Telefonda full acilsin, buyuk ekranda eski kart boyutu + sticky devam etsin.
     <div className="mt-6 w-full max-w-full rounded-4xl border bg-[#1E1E1F] sm:mt-10 sm:max-w-[420px] md:mt-15 md:h-160 md:w-65 md:sticky md:top-15 md:ms-0">
-      {/* Ic boslugu da kademeli: kucukte az, ekrani buyutunce normal seviyeye geliyor. */}
-      <div className="m-6 sm:m-8 md:m-10">
+      {/* Ic boslugu padding ile veriyoruz ki icerik daha genis alana yayilabilsin */}
+      <div className="p-6 sm:p-8">
         <div className="mx-auto w-50 rounded-4xl border border-white bg-zinc-800 h-50 md:mx-0">
           <img
             className="m-3 h-43 w-43 cursor-pointer rounded-4xl object-cover"
@@ -31,15 +31,14 @@ export default function SideBar() {
 
         <hr className="border-gray-600 mt-4" />
         <div className="mt-8 space-y-6">
-          <a className="flex" href="mailto:feridunkarakas@gm...">
+          <a className="flex" href="mailto:feridunkarakas@gmail.com">
             <Contact
               Icon={EnvelopeIcon}
               label="email"
               value="feridunkarakas@gm.."
-
             />
           </a>
-          <a className="flex" href="tel:+90 552 292 1038"> <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 1038" /> </a>
+          <a className="flex" href="tel:+90 552 292 10 38"> <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 10 38" /> </a>
           <Contact
             Icon={MapPinIcon}
             label="Location"

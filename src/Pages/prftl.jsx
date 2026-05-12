@@ -22,16 +22,15 @@ export default function Prftl({
   const cardInner = (
     <div
       onClick={handleCardClick}
-      className="relative h-40 overflow-hidden rounded-xl border border-zinc-700 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:border-yellow-400/50 group-hover:shadow-lg group-hover:shadow-yellow-400/10"
+      className="relative h-44 overflow-hidden rounded-2xl border border-zinc-700/50 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-yellow-400/30 group-hover:shadow-xl group-hover:shadow-black/40"
     >
       {iimg}
       {hasStores && (
         <div
-          className={`absolute inset-0 flex items-center justify-center gap-2 rounded-xl bg-black/70 transition-opacity duration-300 ${
-            isMobileStoresOpen
+          className={`absolute inset-0 flex items-center justify-center gap-2 rounded-xl bg-black/70 transition-opacity duration-300 ${isMobileStoresOpen
               ? "pointer-events-auto opacity-100"
               : "pointer-events-none opacity-0"
-          } md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100`}
+            } md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100`}
         >
           {appStoreLink && (
             <a
@@ -66,9 +65,12 @@ export default function Prftl({
 
   return (
     <div className="group">
-      <h2 className="mb-3 text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-yellow-400">
-        {title}
-      </h2>
+      <div className="mb-3">
+        <h2 className="text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-yellow-400">
+          {title}
+        </h2>
+      </div>
+      
       {linkk ? (
         <a href={linkk} target="_blank" rel="noopener noreferrer">
           {cardInner}
@@ -76,8 +78,11 @@ export default function Prftl({
       ) : (
         cardInner
       )}
+
       {descc && (
-        <p className="mt-3 text-sm leading-relaxed text-zinc-400">{descc}</p>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+          {descc}
+        </p>
       )}
     </div>
   );
