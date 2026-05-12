@@ -31,13 +31,13 @@ export default function Portfolyo() {
         />
         <Prftl
           title="Convertly"
-          linkk="https://convertly-4vdwc2pgy-feridun-karakas-projects.vercel.app"
+          linkk="https://convertly-fawn-eight.vercel.app/"
           iimg={
             <div className="flex h-full w-full items-center justify-center bg-[#020617]">
-               <div className="flex h-32 w-full items-center justify-center px-6">
-                <img 
-                  src={convertlyIcon} 
-                  className="h-full w-full object-contain" 
+              <div className="flex h-32 w-full items-center justify-center px-6">
+                <img
+                  src={convertlyIcon}
+                  className="h-full w-full object-contain"
                   alt="Convertly"
                 />
               </div>
