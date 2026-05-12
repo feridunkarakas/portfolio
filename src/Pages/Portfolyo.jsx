@@ -45,6 +45,20 @@ export default function Portfolyo() {
           }
           descc="Fikri ve teknik araştırmaları bana ait olan, yapay zeka destekli olarak geliştirdiğim modern ve hızlı bir dosya dönüştürme platformu."
         />
+        <Prftl
+          title="Hava Durumu"
+          linkk="https://weather-app-livid-two-74.vercel.app/"
+          iimg={
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600">
+              <div className="relative">
+                <div className="h-16 w-16 rounded-full bg-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.6)]" />
+                <div className="absolute -bottom-2 -right-4 h-12 w-20 rounded-full bg-white/90 blur-[1px]" />
+                <div className="absolute -bottom-4 -left-2 h-10 w-16 rounded-full bg-white/80 blur-[1px]" />
+              </div>
+            </div>
+          }
+          descc="Kullanıcıların diledikleri şehirdeki anlık hava durumu verilerine hızlıca ulaşmasını sağlayan, React ve API entegrasyonu ile geliştirdiğim modern bir web uygulaması."
+        />
       </div>
     </div>
   );
