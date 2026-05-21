@@ -42,7 +42,7 @@ export default function Portfolyo() {
               </span>
             </div>
           }
-          descc="Tamamen yapay zeka destekli geliştirdiğim Vicco çalışan portalı; şirket içi kullanıcıların giriş yapıp günlük iş akışlarını yönettiği kurumsal web platformu."
+          descc="Tamamen yapay zeka destekli geliştirdiğimiz Vicco çalışan portalı; şirket içi kullanıcıların giriş yapıp günlük iş akışlarını yönettiği kurumsal web platformu."
         />
         <Prftl
           title="Convertly"
