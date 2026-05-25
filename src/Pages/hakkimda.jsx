@@ -13,7 +13,7 @@ import geminiSvg from "../assests/gemini-svg.svg";
 import sqlIcon from "../assests/sql.svg";
 export default function Hakkimda() {
   return (
-    <div>
+    <div className="pb-10">
       <h2 className="text-white  px-10 pt-10  font-semibold text-3xl tracking-wide">
         Hakkımda
       </h2>
@@ -69,7 +69,7 @@ export default function Hakkimda() {
       <h2 className="text-white px-10 pt-10  font-semibold text-2xl tracking-wide">
         Yetenekler
       </h2>
-      <div className="scrollbar flex gap-12 overflow-x-auto px-10 pt-5 pb-15">
+      <div className="skills-scroll -mx-2 flex gap-12 overflow-x-auto px-10 pt-5 pb-8">
         <Skills
           iccons={
             <img

@@ -8,7 +8,31 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #d1a932 #222230;
+}
 
+/* Yetenekler: yatay kaydirma cubugu her zaman gorunur olsun */
+.skills-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #eab308 #2a2a35;
+  scrollbar-gutter: stable;
+}
+
+.skills-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-scroll::-webkit-scrollbar-track {
+  background: #2a2a35;
+  border-radius: 9999px;
+}
+
+.skills-scroll::-webkit-scrollbar-thumb {
+  background: #eab308;
+  border-radius: 9999px;
+}
+
+.skills-scroll::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
 }
 
 

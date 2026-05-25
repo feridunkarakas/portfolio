@@ -14,7 +14,7 @@ export default function MainContent({ active, setActive }) {
     // CV daha uzun, Portfolyo daha kisa gibi.
     // Sonradan bir sayfayi uzatip kisaltmak icin sadece bu alani degistirmem yeterli.
     // Buraya xl koydum ki desktopta eski olculer ayni kalsin.
-    hakkimda: { size: "xl:h-250 xl:w-220" },
+    hakkimda: { size: "xl:min-h-250 xl:h-auto xl:w-220" },
     // CV uzun olabiliyor. O yuzden min-h + h-auto dedim.
     // Mantik: icerik uzarsa kutu da uzuyor, icerde scroll cikmiyor.
     cv: { size: "xl:min-h-320 xl:h-auto xl:w-220" },
