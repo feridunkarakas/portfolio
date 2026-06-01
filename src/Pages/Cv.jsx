@@ -9,7 +9,7 @@ export default function Cv() {
       <hr className="w-15 h-1 border-0 bg-yellow-500 rounded-xl ml-10 mt-5 " />
       <div className="mt-6 flex justify-end px-10">
         <a
-          href="/Feridun%20Karaka%C5%9F%20-%20CV.pdf"
+          href="/Feridun-Karakas-CV.pdf"
           download="Feridun-Karakas-CV.pdf"
           className="inline-flex items-center gap-2 rounded-xl border border-zinc-600 px-4 py-2 text-sm font-medium text-yellow-400 transition hover:bg-yellow-500 hover:text-black"
         >
