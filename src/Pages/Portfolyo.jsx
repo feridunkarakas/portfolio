@@ -1,4 +1,5 @@
 import Prftl from "./prftl";
+import akilalIcon from "../assests/akilal.png";
 import numletIcon from "../assests/numlet.png";
 import convertlyIcon from "../assests/convertly.svg";
 
@@ -12,6 +13,22 @@ export default function Portfolyo() {
 
       {/* Kart dizilimi: telefonda 1, tablette 2, buyuk ekranda 3. */}
       <div className="grid grid-cols-1 gap-8 px-10 pt-8 md:grid-cols-2 xl:grid-cols-3">
+        <Prftl
+          title="AkılAl"
+          linkk="https://akilal.net/"
+          iimg={
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-zinc-900 via-[#2a1712] to-zinc-950">
+              <div className="h-24 w-24 overflow-hidden rounded-[22%] shadow-xl shadow-black/40">
+                <img
+                  src={akilalIcon}
+                  alt="AkılAl"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          }
+          descc="Tamamen yapay zeka ile ürettiğim, ikinci el araç alacaklar için satın alma öncesi karar dosyası hazırlayan web platformu. İlandaki eksik ve çelişkili bilgileri, modelin bilinen risklerini, satıcıya sorulacak soruları ve ekspertizde odaklanılacak noktaları tek ekranda toplar."
+        />
         <Prftl
           title="Numlet"
           iimg={
