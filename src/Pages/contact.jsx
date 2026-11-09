@@ -5,7 +5,7 @@ export default function Contact({Icon, label, value}) {
       </div>
       <div className="flex flex-col min-w-0 overflow-hidden">
         <label className="text-zinc-400 text-[10px] uppercase tracking-wider">{label}</label>
-        <span className="text-zinc-200 text-[13px] font-medium cursor-pointer break-all" title={value}>{value}</span>
+        <span className="text-zinc-200 text-[13px] font-medium cursor-pointer break-words" title={typeof value === "string" ? value : undefined}>{value}</span>
       </div>
     </div>
     )

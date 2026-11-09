@@ -18,7 +18,7 @@ export default function MainContent({ active, setActive }) {
     // CV uzun olabiliyor. O yuzden min-h + h-auto dedim.
     // Mantik: icerik uzarsa kutu da uzuyor, icerde scroll cikmiyor.
     cv: { size: "xl:min-h-320 xl:h-auto xl:w-220" },
-    portfolyo: { size: "xl:h-220 xl:w-220" },
+    portfolyo: { size: "xl:min-h-220 xl:h-auto xl:w-220" },
     iletisim: { size: "xl:h-250 xl:w-220" },
   };
 

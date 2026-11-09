@@ -12,7 +12,25 @@ export default function Portfolyo() {
       <hr className="w-15 h-1.5 bg-yellow-500 rounded-xl ml-10 mt-5" />
 
       {/* Kart dizilimi: telefonda 1, tablette 2, buyuk ekranda 3. */}
-      <div className="grid grid-cols-1 gap-8 px-10 pt-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 px-10 pt-8 pb-10 md:grid-cols-2 xl:grid-cols-3">
+        <Prftl
+          title="Numlet"
+          iimg={
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-900 via-[#1a2547] to-slate-950">
+              <div className="h-24 w-24 overflow-hidden rounded-[22%] shadow-xl shadow-black/40">
+                <img
+                  src={numletIcon}
+                  alt="Numlet"
+                  className="h-full w-full scale-110 object-cover"
+                />
+              </div>
+            </div>
+          }
+          descc="App Store ve Google Play'de yayında olan sayı bulmaca oyunu. Oyun mekaniği ve kullanıcı deneyimi araştırmasından mağaza yayınına kadar süreci yürüttüm; yapay zekâ destekli geliştirdim."
+          tech={["React Native", "Expo"]}
+          playStoreLink="https://play.google.com/store/apps/details?id=com.numbermatchpuzzle.app&pcampaignid=web_share"
+          appStoreLink="https://apps.apple.com/tr/app/numlet-number-logic-puzzle/id6760181329?l=tr"
+        />
         <Prftl
           title="AkılAl"
           linkk="https://akilal.net/"
@@ -27,24 +45,8 @@ export default function Portfolyo() {
               </div>
             </div>
           }
-          descc="Tamamen yapay zeka ile ürettiğim, ikinci el araç alacaklar için satın alma öncesi karar dosyası hazırlayan web platformu. İlandaki eksik ve çelişkili bilgileri, modelin bilinen risklerini, satıcıya sorulacak soruları ve ekspertizde odaklanılacak noktaları tek ekranda toplar."
-        />
-        <Prftl
-          title="Numlet"
-          iimg={
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-900 via-[#1a2547] to-slate-950">
-              <div className="h-24 w-24 overflow-hidden rounded-[22%] shadow-xl shadow-black/40">
-                <img
-                  src={numletIcon}
-                  alt="Numlet"
-                  className="h-full w-full scale-110 object-cover"
-                />
-              </div>
-            </div>
-          }
-          descc="Oyun mekanikleri ve kullanıcı deneyimi üzerine yaptığım derinlemesine araştırmalarla, yapay zeka destekli olarak hayata geçirdiğim, mağazalarda yayında olan sayı bulmaca oyunu."
-          playStoreLink="https://play.google.com/store/apps/details?id=com.numbermatchpuzzle.app&pcampaignid=web_share"
-          appStoreLink="https://apps.apple.com/tr/app/numlet-number-logic-puzzle/id6760181329?l=tr"
+          descc="İkinci el araç alacaklar için satın alma öncesi karar dosyası hazırlayan web platformu. İlandaki eksik ve çelişkili bilgileri, modelin bilinen risklerini ve satıcıya sorulacak soruları tek ekranda toplar. Yapay zekâ destekli geliştirdim; ürün kararları ve yayın süreci bana ait."
+          tech={["Next.js", "TypeScript", "Supabase", "PayTR"]}
         />
         <Prftl
           title="Vicco Portal"
@@ -59,7 +61,8 @@ export default function Portfolyo() {
               </span>
             </div>
           }
-          descc="Tamamen yapay zeka destekli geliştirdiğimiz Vicco çalışan portalı; şirket içi kullanıcıların giriş yapıp günlük iş akışlarını yönettiği kurumsal web platformu."
+          descc="Vicco çalışanlarının günlük iş akışlarını yönettiği kurumsal portal. İş yerinde yapay zekâ destekli geliştiriyoruz."
+          tech={["PHP", "SQL"]}
         />
         <Prftl
           title="Convertly"
@@ -75,7 +78,8 @@ export default function Portfolyo() {
               </div>
             </div>
           }
-          descc="Fikri ve teknik araştırmaları bana ait olan, yapay zeka destekli olarak geliştirdiğim modern ve hızlı bir dosya dönüştürme platformu."
+          descc="Tarayıcıdan kullanılan dosya dönüştürme platformu. Fikir ve teknik araştırma bana ait; yapay zekâ destekli geliştirdim."
+          tech={["JavaScript", "Docker"]}
         />
         <Prftl
           title="Hava Durumu"
@@ -89,7 +93,8 @@ export default function Portfolyo() {
               </div>
             </div>
           }
-          descc="Kullanıcıların diledikleri şehirdeki anlık hava durumu verilerine hızlıca ulaşmasını sağlayan, React ve API entegrasyonu ile geliştirdiğim modern bir web uygulaması."
+          descc="Seçilen şehrin anlık hava durumu verilerini API üzerinden gösteren web uygulaması."
+          tech={["React", "REST API"]}
         />
       </div>
     </div>

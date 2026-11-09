@@ -1,4 +1,4 @@
-import { BookOpen, BriefcaseBusiness, Download } from "lucide-react";
+import { BookOpen, BriefcaseBusiness, Download, Languages } from "lucide-react";
 
 export default function Cv() {
   return (
@@ -42,7 +42,7 @@ export default function Cv() {
                 Bilgisayar Programcılığı
               </p>
               <p className="mt-1 text-[1rem] font-medium text-yellow-400">
-                2024 - Günümüz
+                2024 - Devam ediyor
               </p>
             </article>
             <article className="relative px-2 py-1.5">
@@ -51,7 +51,7 @@ export default function Cv() {
                 Kütahya Dumlupınar Üniversitesi
               </h4>
               <p className="mt-1 text-[0.94rem] leading-6 text-zinc-300">
-                Dış Ticaret
+                Dış Ticaret (Ön Lisans)
               </p>
               <p className="mt-1 text-[1rem] font-medium text-yellow-400">
                 2018 - 2020
@@ -184,7 +184,7 @@ export default function Cv() {
             <h4 className="text-[1.02rem] font-semibold leading-6 text-white">
               E-Ticaret Uzmanı
             </h4>
-            <p className="mt-1 text-[1rem] leading-6 text-zinc-100">LAUF</p>
+            <p className="mt-1 text-[1rem] leading-6 text-zinc-100">Lauf</p>
             <p className="mt-1 text-[1rem] font-medium text-yellow-400">
               Eylül 2023 - Nisan 2024
             </p>
@@ -228,7 +228,7 @@ export default function Cv() {
               E-Ticaret Operasyon Uzmanı
             </h4>
             <p className="mt-1 text-[1rem] leading-6 text-zinc-100">
-              IMAGINARIUM
+              Imaginarium
             </p>
             <p className="mt-1 text-[1rem] font-medium text-yellow-400">
               Mayıs 2021 - Haziran 2022
@@ -242,6 +242,18 @@ export default function Cv() {
             </p>
           </article>
         </div>
+      </div>
+
+      <div className="mt-8 max-w-3xl pr-2">
+        <div className="mb-4 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-700/70 bg-zinc-900/70 shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+            <Languages className="h-4 w-4 text-yellow-400" />
+          </div>
+          <h3 className="text-[1.35rem] font-semibold text-white">Diller</h3>
+        </div>
+        <p className="pl-12 text-[0.94rem] leading-6 text-zinc-300">
+          İngilizce: Orta düzey
+        </p>
       </div>
     </section>
   );

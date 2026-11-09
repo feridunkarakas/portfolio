@@ -8,6 +8,7 @@ export default function Prftl({
   descc,
   playStoreLink,
   appStoreLink,
+  tech,
 }) {
   const hasStores = playStoreLink || appStoreLink;
   const [isMobileStoresOpen, setIsMobileStoresOpen] = useState(false);
@@ -83,6 +84,19 @@ export default function Prftl({
         <p className="mt-3 text-sm leading-relaxed text-zinc-300">
           {descc}
         </p>
+      )}
+
+      {tech && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {tech.map((t) => (
+            <span
+              key={t}
+              className="rounded-lg border border-zinc-700 bg-zinc-800/70 px-2 py-0.5 text-xs text-zinc-300"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       )}
     </div>
   );

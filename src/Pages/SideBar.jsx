@@ -3,7 +3,7 @@ import { PhoneIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import Contact from "./contact";
 import Lcon from "./icons";
-import foto from "../assests/foto.jpeg";
+import foto from "../assests/foto-cv.png";
 import linkedinSvg from "../assests/linkedin.svg";
 import githubSvg from "../assests/github.svg";
 
@@ -15,9 +15,9 @@ export default function SideBar() {
       <div className="p-6 sm:p-8">
         <div className="mx-auto w-50 rounded-4xl border border-white bg-zinc-800 h-50 md:mx-0">
           <img
-            className="m-3 h-43 w-43 cursor-pointer rounded-4xl object-cover"
+            className="m-3 h-43 w-43 rounded-full object-cover"
             src={foto}
-            alt="fotos"
+            alt="Feridun Karakaş"
           />
         </div>
 
@@ -26,7 +26,7 @@ export default function SideBar() {
         </h1>
 
         <div className="border bg-zinc-800 rounded-2xl text-center mt-4">
-          <span className="text-white text-sm">Frontend Developer</span>
+          <span className="text-white text-sm">Junior Frontend Developer</span>
         </div>
 
         <hr className="border-gray-600 mt-4" />
@@ -34,14 +34,14 @@ export default function SideBar() {
           <a className="flex" href="mailto:feridunkarakas@gmail.com">
             <Contact
               Icon={EnvelopeIcon}
-              label="email"
-              value="feridunkarakas@gm.."
+              label="E-posta"
+              value={<>feridunkarakas<wbr />@gmail.com</>}
             />
           </a>
-          <a className="flex" href="tel:+90 552 292 10 38"> <Contact Icon={PhoneIcon} label="Phone" value="+90 552 292 10 38" /> </a>
+          <a className="flex" href="tel:+90 552 292 10 38"> <Contact Icon={PhoneIcon} label="Telefon" value="+90 552 292 10 38" /> </a>
           <Contact
             Icon={MapPinIcon}
-            label="Location"
+            label="Konum"
             value="İstanbul/Türkiye"
           />
           <div className=" flex justify-center gap-7 ">
