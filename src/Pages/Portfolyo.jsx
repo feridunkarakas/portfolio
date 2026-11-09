@@ -61,7 +61,7 @@ export default function Portfolyo() {
               </span>
             </div>
           }
-          descc="Vicco çalışanlarının günlük iş akışlarını yönettiği kurumsal portal. İş yerinde yapay zekâ destekli geliştiriyoruz."
+          descc="400-500 kişinin günlük iş akışlarını yönettiği Vicco kurumsal portalı. İş yerinde yapay zekâ destekli geliştiriyoruz."
           tech={["PHP", "SQL"]}
         />
         <Prftl

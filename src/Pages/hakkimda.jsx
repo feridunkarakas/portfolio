@@ -24,8 +24,8 @@ export default function Hakkimda() {
         <p className="text-sm leading-7 tracking-wide text-gray-200">
           Yaklaşık 3,5 yıl e-ticaret operasyonu ve kategori yönetimi alanında
           çalıştıktan sonra yazılıma geçtim. Şu anda Vicco&apos;da Junior Frontend
-          Developer olarak PHP ve SQL tabanlı şirket içi yönetim portalları
-          geliştiriyor, yapay zekâ API&apos;lerini iş akışlarına entegre ediyorum.
+          Developer olarak 400-500 kişinin kullandığı kurumsal yönetim portalını
+          PHP ve SQL ile geliştiriyor, yapay zekâ API&apos;lerini iş akışlarına entegre ediyorum.
           Kişisel projelerimde React, Tailwind CSS ve React Native kullanıyorum;
           App Store ve Google Play&apos;de yayında bir mobil uygulamam var. İş
           tarafını bilmem, kullanıcının gerçek ihtiyacını anlayan çözümler

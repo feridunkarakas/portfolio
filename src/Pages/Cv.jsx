@@ -76,14 +76,14 @@ export default function Cv() {
               <h4 className="text-[1.02rem] font-semibold leading-6 text-white">
                  Full Stack Developer
               </h4>
-              <p className="mt-1 text-[0.94rem] leading-6 text-zinc-300">Workintech</p>
+              <p className="mt-1 text-[0.94rem] leading-6 text-zinc-300">Workintech (Mayıs 2025 - Mayıs 2026)</p>
             </article>
             <article className="relative px-2 py-1.5">
               <span className="absolute -left-[24px] top-3 block h-2.5 w-2.5 rounded-full border border-zinc-900 bg-yellow-400 shadow-[0_0_0_2px_rgba(250,204,21,0.1)]" />
               <h4 className="text-[1.02rem] font-semibold leading-6 text-white">
               Frontend Developer 
               </h4>
-              <p className="mt-1 text-[0.94rem] leading-6 text-zinc-300">Workintech</p>
+              <p className="mt-1 text-[0.94rem] leading-6 text-zinc-300">Workintech (Mayıs 2025 - Mayıs 2026)</p>
             </article>
             <article className="relative px-2 py-1.5">
               <span className="absolute -left-[24px] top-3 block h-2.5 w-2.5 rounded-full border border-zinc-900 bg-yellow-400 shadow-[0_0_0_2px_rgba(250,204,21,0.1)]" />
@@ -133,8 +133,8 @@ export default function Cv() {
             {/* Madde aciklamalarini p ile yazdim.
                Neden? ul/li de olurdu ama bu hali daha sade ve duz bir yapi veriyor. */}
             <p className="mt-2.5 text-[0.92rem] leading-6 text-zinc-300">
-              • PHP ve SQL mimarisi üzerinde çalışan kurumsal yönetim
-              portallarının (ERP/Panel) uçtan uca geliştirilmesi ve bakımı.
+              • 400-500 kişinin kullandığı kurumsal yönetim portalının (ERP/Panel)
+              PHP ve SQL ile uçtan uca geliştirilmesi ve bakımı.
             </p>
             <p className="text-[0.92rem] leading-6 text-zinc-300">
               • Şirket içi iş akışlarını otomatize etmek amacıyla AI modellerinin
